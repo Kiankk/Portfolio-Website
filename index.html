@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kian Dehghani | Developer Portfolio</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicons (Ensure these files are in your project's root folder) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+
+    <!-- ======================== Header & Navigation ======================== -->
+    <header>
+        <div class="logo">&lt;Kian Dehghani /&gt;</div>
+        
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-controls">
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <button id="menu-btn" aria-label="Open Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Side Menu -->
+    <div class="mobile-menu-overlay" id="mobile-menu">
+        <button id="close-menu-btn" aria-label="Close Menu">&times;</button>
+        <ul class="mobile-links">
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#skills" class="mobile-link">Skills</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- ======================== Hero Section ======================== -->
+        <section id="about" class="hero-container">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="glass-content hidden">
+                <p class="eyebrow">Hello, I am</p>
+                <h1 class="glitch-text" data-text="Kian Dehghani">Kian Dehghani</h1>
+                <p class="subtitle" style="padding-bottom: 1rem;">I am a <span class="typewriter-text"></span><span class="cursor">|</span></p>                
+                <div class="cta-group">
+                    <a href="#contact" class="btn btn-primary">Contact Me</a>
+                    <a href="resume.pdf" download class="btn btn-outline">Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== Projects Section ======================== -->
+        <section id="projects">
+            <h2 class="section-title hidden">Selected Work</h2>
+            <div class="projects-grid">
+                
+                <article class="project-card hidden">
+                    <div class="card-image">
+                        <img src="https://placehold.co/600x400/2563eb/ffffff?text=Portfolio+Site" alt="Portfolio Website Project Screenshot">
+                    </div>
+                    <div class="card-content">
+                        <h3>Portfolio Website</h3>
+                        <p>A fully responsive, accessible developer portfolio built with Semantic HTML, CSS Variables, and Vanilla JavaScript.</p>
+                        <div class="tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#">Live Demo</a>
+                            <a href="#">Source Code</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card hidden">
+                    <div class="card-image">
+                        <img src="https://placehold.co/600x400/10b981/ffffff?text=Finance+Tracker" alt="Finance App Project Screenshot">
+                    </div>
+                    <div class="card-content">
+                        <h3>Finance Tracker</h3>
+                        <p>A desktop application for tracking personal expenses using Python and SQLite, featuring data persistence and a clean UI.</p>
+                        <div class="tags">
+                            <span>Python</span><span>Tkinter</span><span>SQLite</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#">View Repo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card hidden">
+                    <div class="card-image">
+                        <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Automation+Bot" alt="Automation Bot Project Screenshot">
+                    </div>
+                    <div class="card-content">
+                        <h3>File Automator</h3>
+                        <p>An intelligent script that organizes file downloads automatically based on file extensions to keep workspaces clean.</p>
+                        <div class="tags">
+                            <span>Python</span><span>Automation</span><span>OS</span>
+                        </div>
+                        <div class="card-links">
+                            <a href="#">View Repo</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ======================== Skills Section ======================== -->
+        <section id="skills">
+            <h2 class="section-title hidden">Tech Stack</h2>
+            <div class="skills-container hidden">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li>HTML5 & Semantic Markup</li>
+                        <li>CSS3 / Animations</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend / Python</h3>
+                    <ul>
+                        <li>Python 3</li>
+                        <li>SQL / SQLite</li>
+                        <li>API Integration</li>
+                        <li>Automation Scripts</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>VS Code</li>
+                        <li>Command Line / Bash</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======================== Contact Section ======================== -->
+        <section id="contact">
+            <div class="contact-box hidden">
+                <h2>Let's Work Together</h2>
+                <p>Have a project in mind or just want to say hi? Fill out the form below and I'll get back to you as soon as possible.</p>
+                
+                <form action="https://formspree.io/f/mzzqewkj" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ======================== Footer ======================== -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/kiankk" target="_blank" aria-label="GitHub Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/kian-dehghani/" target="_blank" aria-label="LinkedIn Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+        </div>
+        <p>&copy; <span id="year"></span> Kian Dehghani. Handcrafted.</p>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
