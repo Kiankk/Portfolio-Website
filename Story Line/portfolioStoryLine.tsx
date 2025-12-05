@@ -38,3 +38,23 @@ const PROJECTS = [
     link: "#"
   }
 ];
+
+// ============================================================================
+// PART 2: ANIMATION UTILITIES
+// ============================================================================
+
+// Helper to create glowing lines on canvas
+const strokeGlow = (ctx: CanvasRenderingContext2D, color: string, width: number, blur: number = 10) => {
+  ctx.shadowBlur = blur;
+  ctx.shadowColor = color;
+  ctx.strokeStyle = color;
+  ctx.lineWidth = width;
+  ctx.stroke();
+  ctx.shadowBlur = 0;
+};
+
+// Linear Interpolation for smooth animation
+const lerp = (start: number, end: number, factor: number) => {
+  return start + (end - start) * factor;
+};
+
