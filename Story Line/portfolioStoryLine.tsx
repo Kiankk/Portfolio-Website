@@ -110,4 +110,41 @@ const ScrollyTelling = () => {
                 : 'rgba(56, 189, 248, 0.4)' // Blue data points
         });
     }
+
+    // 2. Vortex Particles (The Spark)
+    const vortexParticles: {angle: number, radius: number, speed: number, char: string}[] = [];
+    for(let i=0; i<300; i++) {
+        vortexParticles.push({
+            angle: Math.random() * Math.PI * 2,
+            radius: Math.random() * 400,
+            speed: 0.02 + Math.random() * 0.03,
+            char: Math.random() > 0.5 ? "1" : "0"
+        });
+    }
+
+    // 3. Snow Particles (Heavier storm)
+    const snow: {x: number, y: number, z: number, speed: number, size: number}[] = [];
+    for(let i=0; i<400; i++) {
+        snow.push({
+            x: Math.random(),
+            y: Math.random(),
+            z: Math.random(),
+            speed: 0.01 + Math.random() * 0.02,
+            size: Math.random() * 2 + 0.5
+        });
+    }
+
+    // 4. Quant Chart Data
+    const candles: {open: number, close: number, high: number, low: number}[] = [];
+    let price = 100;
+    for(let i=0; i<60; i++) {
+        const change = (Math.random() - 0.48) * 4; 
+        const open = price;
+        const close = price + change;
+        const high = Math.max(open, close) + Math.random();
+        const low = Math.min(open, close) - Math.random();
+        candles.push({open, close, high, low});
+        price = close;
+    }
+
 }
