@@ -58,3 +58,29 @@ const lerp = (start: number, end: number, factor: number) => {
   return start + (end - start) * factor;
 };
 
+// ============================================================================
+// PART 3: MAIN ANIMATION ENGINE (SCROLLYTELLING)
+// ============================================================================
+
+const ScrollyTelling = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  
+  const targetScrollRef = useRef(0);
+  const currentScrollRef = useRef(0);
+  const [activeScene, setActiveScene] = useState(0);
+
+  // --- Scroll Event Listener ---
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const { top, height } = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const scrolled = -top;
+      const totalScrollable = height - windowHeight;
+      targetScrollRef.current = Math.max(0, Math.min(1, scrolled / totalScrollable));
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+}
