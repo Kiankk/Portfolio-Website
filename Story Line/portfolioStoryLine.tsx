@@ -83,4 +83,31 @@ const ScrollyTelling = () => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // --- Canvas Rendering Loop ---
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let frameId: number;
+    let time = 0;
+
+    // --------------------------------------------------------
+    // ASSET INITIALIZATION (Run Once)
+    // --------------------------------------------------------
+
+    // 1. Planet Particles (Stylized)
+    const globeParticles: {lat: number, lon: number, size: number, color: string}[] = [];
+    for(let i=0; i<800; i++) {
+        globeParticles.push({
+            lat: (Math.random() - 0.5) * Math.PI,
+            lon: Math.random() * Math.PI * 2,
+            size: Math.random() * 1.5 + 0.5,
+            color: Math.random() > 0.8 
+                ? 'rgba(255,255,255,0.8)' // Bright lights
+                : 'rgba(56, 189, 248, 0.4)' // Blue data points
+        });
+    }
 }
